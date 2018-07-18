@@ -1,0 +1,229 @@
+/*BASIC LAYOUT*/
+
+.body {
+    position: relative;
+    width: 100%;
+    background-image: url(decha.jpg);
+
+}
+
+.image_container img {
+    width: 300px;
+    height: 400px;
+    padding: 3px;
+    background: #555;
+}
+
+.topSide {
+    display: flex;
+
+}
+
+.top1 {
+    flex: 1;
+
+    height: 130px;
+}
+
+.logo {
+    margin-top: 20px;
+    background-image: url(ubiqum%20bookstore%20logo.png);
+    height: 200px;
+
+    z-index: 2;
+    background-repeat: no-repeat;
+    margin-left: 200px;
+
+}
+
+.top3 {
+    flex: 1;
+    /*    background-color: aqua;*/
+    height: 130px;
+}
+
+.inputContainer {
+    margin-left: 20px;
+    margin-top: 100px;
+    height: 48px;
+    width: 360px;
+    background-color: #D65C0B;
+
+}
+
+.input {
+    width: 350px;
+    margin-left: 5px;
+    padding: 6px;
+    margin-top: 4px;
+
+}
+
+.h1 {
+    display: none;
+}
+
+/*
+.top2 {
+    flex-grow: 1;
+    background-color: green;
+}
+*/
+
+.image_container {
+    position: absolute;
+    margin-top: 0px;
+    height: 1000px;
+    width: 1500px;
+
+
+}
+
+.imglist {
+    margin-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*FUCKING FLIP*/
+
+/* entire container, keeps perspective */
+
+.flip-container {
+    perspective: 1000px;
+    /*    flex: 1;*/
+}
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 300px;
+    height: 400px;
+}
+
+/* flip speed goes here */
+
+.flipper {
+    transition: 0.7s;
+    transform-style: preserve-3d;
+
+    position: relative;
+
+}
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1px;
+    background: #555;
+
+}
+
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+}
+
+/*CARD CSS*/
+
+.backCard {
+    display: flex;
+    flex-direction: column;
+}
+
+a .title {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+
+}
+
+.title {
+    color: whitesmoke;
+    flex: 1;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 27px;
+}
+
+a .description {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
+
+.description {
+    color: whitesmoke;
+    flex: 1;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.btn-primary {
+    border-color: #D65C0B !important;
+}
+
+a.btn.btn-primary {
+    margin-left: 4px;
+    margin-right: 4px;
+    background-color: #D65C0B;
+
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+    background-color: #D65C0B;
+    border-color: #D65C0B;
+}
+
+}
+
+img.fancybox-image {
+    height: 550px;
+    width: 470px;
+}
+
+a.btn.btn-primary {
+    background-color: #D65C0B !important;
+    border-color: #D65C0B !important;
+}
+
+/*LOADER*/
+
+/*
+#loader {
+    border: 16px solid black;
+    border-radius: 50%;
+    border-top: 16px solid white;
+    width: 120px;
+    height: 120px;
+    
+    animation: spin 2s linear infinite;
+    display: none;
+}
+*/
+
+/*STILL NEED TO MAKE SHOW MORE BUTTONS GET THE COLOR( RIGHT CLICK AND MARGIN)*/
